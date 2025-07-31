@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Footer from '../components/Footer';
 
+
 function Booking() {
   const [location, setLocation] = useState('Studio');
 
@@ -93,6 +94,7 @@ function Booking() {
           <input type="hidden" name="_template" value="table" />
           <input type="hidden" name="_captcha" value="false" />
           <input type="hidden" name="_next" value="https://makeupbyastral.netlify.app/thank-you" />
+
           <button
             type="submit"
             className="mt-6 w-full py-3 rounded-lg bg-darkred text-white font-semibold text-lg shadow-md hover:scale-105 transition-transform duration-200 border-2 border-darkred"
