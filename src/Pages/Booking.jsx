@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import Footer from '../components/Footer';
+import ThankYou from '../components/Thank';
+
 
 
 function Booking() {
