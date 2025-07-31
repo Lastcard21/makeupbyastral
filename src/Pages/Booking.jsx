@@ -8,7 +8,7 @@ function Booking() {
     <div>
       <div className="min-h-screen flex items-center justify-center bg-darkred/10 py-10">
         <form
-          action="https://formsubmit.co/makeupbyastral@gmail.com"
+          action="https://formsubmit.co/akandeabdulquadirolamilekan@gmail.com"
           method="POST"
           className="w-full max-w-md bg-white rounded-2xl shadow-xl p-8 border-2 border-darkred"
         >
