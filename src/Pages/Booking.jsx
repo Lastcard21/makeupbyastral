@@ -46,7 +46,7 @@ function Booking() {
               type="date"
               name="date"
               required
-              className="w-full md:w-40 px-4 py-3 rounded-lg border border-darkred focus:outline-none focus:ring-2 focus:ring-darkred bg-darkred/5 text-darkred"
+              className="w-40 md:w-40 px-4 py-3 rounded-lg border border-darkred focus:outline-none focus:ring-2 focus:ring-darkred bg-darkred/5 text-darkred"
             />
           </div>
           <div className="flex-1">
@@ -55,7 +55,7 @@ function Booking() {
               type="time"
               name="time"
               required
-              className="w-full md:w-40 px-4 py-3 rounded-lg border border-darkred focus:outline-none focus:ring-2 focus:ring-darkred bg-darkred/5 text-darkred"
+              className="w-40 md:w-40 px-4 py-3 rounded-lg border border-darkred focus:outline-none focus:ring-2 focus:ring-darkred bg-darkred/5 text-darkred"
             />
           </div>
         </div>
