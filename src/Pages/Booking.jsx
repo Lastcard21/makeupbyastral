@@ -63,7 +63,7 @@ function Booking() {
               <option value="Casual Makeup">Casual Makeup - $80</option>
               <option value="Owambe Makeup">Owambe Makeup - $80</option>
               <option value="Graduation Makeup">Graduation Makeup - $80</option>
-              <option value="Gele Tying">Gele Tying - $80</option>
+              <option value="Gele Tying">Gele Tying - $15</option>
             </select>
             {/* Service Location Dropdown */}
             <div>
