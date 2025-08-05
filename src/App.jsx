@@ -6,7 +6,7 @@ import Portfolio from './Pages/Portfolio'
 import Booking from './Pages/Booking'
 import ThankYou from './components/Thank'
 import Preloader from './components/Preloader'
-
+import ScrollToTop from './components/ScrollToTop'
 const App = () => {
   const [menuOpen, setMenuOpen] = useState(false)
   const [loading, setLoading] = useState(true)
@@ -20,6 +20,7 @@ const App = () => {
 
   return (
    <>
+    <ScrollToTop />
     {loading && <Preloader />}
     <nav className='flex justify-between items-center px-10 py-5 bg-darkred text-white sticky top-0'>
       <NavLink to='/' className="text-xl font-bold flex">makeupbyastral</NavLink>
