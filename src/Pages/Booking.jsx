@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 
 
 function Booking() {
-  const [location, setLocation] = useState('Studio');
+  const [location, setLocation] = useState('Select Service Location');
 
   return (
     <div>
@@ -75,7 +75,7 @@ function Booking() {
                 required
                 className="w-full px-4 py-3 rounded-lg border border-darkred focus:outline-none focus:ring-2 focus:ring-darkred bg-darkred/5 text-darkred"
               >
-                <option value="">Select Service Type</option>
+                <option value="">Select Service Location</option>
                 <option value="Studio">Studio Service</option>
                 <option value="Home">Home Service</option>
               </select>
