@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 
 
 function Booking() {
-  const [location, setLocation] = useState('Studio');
+  
 
   return (
     <div>
@@ -76,7 +76,7 @@ function Booking() {
               <select
                 name="location"
                 value={location}
-                onChange={e => setLocation(e.target.value)}
+                
                 required
                 className="w-full px-4 py-3 rounded-lg border border-darkred focus:outline-none focus:ring-2 focus:ring-darkred bg-darkred/5 text-darkred"
               >
