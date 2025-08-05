@@ -39,20 +39,26 @@ function Booking() {
               required
               className="w-full px-4 py-3 rounded-lg border border-darkred focus:outline-none focus:ring-2 focus:ring-darkred bg-darkred/5 placeholder-darkred"
             />
-            <div className="flex gap-4">
-              <input
-                type="date"
-                name="date"
-                required
-                className="w-1/2 px-4 py-3 rounded-lg border border-darkred focus:outline-none focus:ring-2 focus:ring-darkred bg-darkred/5 text-darkred"
-              />
-              <input
-                type="time"
-                name="time"
-                required
-                className="w-1/2 px-4 py-3 rounded-lg border border-darkred focus:outline-none focus:ring-2 focus:ring-darkred bg-darkred/5 text-darkred"
-              />
-            </div>
+            <div className="flex flex-col gap-4 md:flex-row md:gap-10">
+          <div className="flex-1">
+            <p className="mb-1 text-darkred font-medium">Date</p>
+            <input
+              type="date"
+              name="date"
+              required
+              className="w-full md:w-40 px-4 py-3 rounded-lg border border-darkred focus:outline-none focus:ring-2 focus:ring-darkred bg-darkred/5 text-darkred"
+            />
+          </div>
+          <div className="flex-1">
+            <p className="mb-1 text-darkred font-medium">Time</p>
+            <input
+              type="time"
+              name="time"
+              required
+              className="w-full md:w-40 px-4 py-3 rounded-lg border border-darkred focus:outline-none focus:ring-2 focus:ring-darkred bg-darkred/5 text-darkred"
+            />
+          </div>
+        </div>
             <select
               name="service"
               required
@@ -74,6 +80,7 @@ function Booking() {
                 required
                 className="w-full px-4 py-3 rounded-lg border border-darkred focus:outline-none focus:ring-2 focus:ring-darkred bg-darkred/5 text-darkred"
               >
+                <option value="">Select Service Type</option>
                 <option value="Studio">Studio Service</option>
                 <option value="Home">Home Service</option>
               </select>
