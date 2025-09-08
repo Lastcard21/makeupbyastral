@@ -107,7 +107,7 @@ function Booking() {
                 The remaining balance will be paid on the day of your reserved session (cash or PayID).
               </p>
               <p className="mt-2">
-                PayID: <span className="font-bold">0414931101</span>
+                PayID: <span className="font-bold">akandebashirat@gmail.com</span>
               </p>
               <p>
                 Name: <span className="font-bold">B Akande</span>
