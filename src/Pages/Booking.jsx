@@ -39,7 +39,7 @@ function Booking() {
               className="w-full px-4 py-3 rounded-lg border border-darkred focus:outline-none focus:ring-2 focus:ring-darkred bg-darkred/5 placeholder-darkred"
             />
 
-            {/* Date and Time Fields with individual labels */}
+            {/* Date and Time Fields */}
             <div className="flex flex-col sm:flex-row gap-4">
               <div className="w-full sm:w-1/2">
                 <p className="text-sm text-darkred mb-1">Date</p>
@@ -61,6 +61,7 @@ function Booking() {
               </div>
             </div>
 
+            {/* Service Selection */}
             <select
               name="service"
               required
@@ -74,6 +75,7 @@ function Booking() {
               <option value="Gele Tying">Gele Tying - $15</option>
             </select>
 
+            {/* Location Selection */}
             <div>
               <select
                 name="location"
@@ -84,11 +86,11 @@ function Booking() {
               >
                 <option value="">Select Service Location</option>
                 <option value="Studio">Studio Service</option>
-                <option value="Home" disabled>Home Service (Currently Unavailable)</option>
+                <option value="Home" disabled>
+                  Home Service (Currently Unavailable)
+                </option>
               </select>
-              <p className="text-xs text-darkred mt-1">
-                Note: Home service requires extra charges.
-              </p>
+              
             </div>
 
             <textarea
@@ -98,13 +100,25 @@ function Booking() {
               className="w-full px-4 py-3 rounded-lg border border-darkred focus:outline-none focus:ring-2 focus:ring-darkred bg-darkred/5 placeholder-darkred min-h-[80px]"
             ></textarea>
 
-            {location === 'Home' && (
-              <p className="text-xs text-darkred">
-                Please provide your address and any relevant details for home service.
+            {/* Payment Instructions */}
+            <div className="bg-darkred/5 p-4 rounded-lg border border-darkred text-sm text-darkred mt-4">
+              <p>
+                <strong>Important:</strong> To confirm your appointment, please make an initial payment of <span className="font-bold">$30</span>. 
+                The remaining balance will be paid on the day of your reserved session (cash or PayID).
               </p>
-            )}
+              <p className="mt-2">
+                PayID: <span className="font-bold">0414931101</span>
+              </p>
+              <p>
+                Name: <span className="font-bold">B Akande</span>
+              </p>
+              <p className="mt-2 italic">
+                Your booking will only be confirmed after the advance payment has been received.
+              </p>
+            </div>
           </div>
 
+          {/* Hidden Inputs */}
           <input type="hidden" name="_subject" value="New Booking Received!" />
           <input type="hidden" name="_template" value="table" />
           <input type="hidden" name="_captcha" value="false" />
