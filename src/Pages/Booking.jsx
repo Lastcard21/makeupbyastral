@@ -84,7 +84,7 @@ function Booking() {
               >
                 <option value="">Select Service Location</option>
                 <option value="Studio">Studio Service</option>
-                <option value="Home">Home Service</option>
+                <option value="Home" disabled>Home Service (Currently Unavailable)</option>
               </select>
               <p className="text-xs text-darkred mt-1">
                 Note: Home service requires extra charges.
