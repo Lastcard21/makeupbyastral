@@ -104,10 +104,10 @@ function Booking() {
             <div className="bg-darkred/5 p-4 rounded-lg border border-darkred text-sm text-darkred mt-4">
               <p>
                 <strong>Important:</strong> To confirm your appointment, please make an initial payment of <span className="font-bold">$30</span>. 
-                The remaining balance will be paid on the day of your reserved session (cash or PayID).
+                The remaining balance will be paid on the day of your reserved session (cash or Email PayID).
               </p>
               <p className="mt-2">
-                PayID: <span className="font-bold">akandebashirat@gmail.com</span>
+                Email PayID: <span className="font-bold">akandebashirat@gmail.com</span>
               </p>
               <p>
                 Name: <span className="font-bold">B Akande</span>
