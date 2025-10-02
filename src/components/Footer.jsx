@@ -30,6 +30,7 @@ const Footer = () => {
                 <h3 className="text-xl font-bold mb-2">Contact</h3>
                 <p className="text-sm">Email: makeupbyastral@gmail.com</p>
                 <p className="text-sm">Address: 1 Brand St, Cloverdale, WA 6105</p>
+                <p className="text-sm">Phone: 0493353668</p>
                 <div className="flex gap-4 mt-4">
                     
                     <a href="https://www.instagram.com/makeupbyastral" className='text-xl' target="_blank"><FaInstagram /></a>
