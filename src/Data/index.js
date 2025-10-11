@@ -3,7 +3,7 @@ export const servicePreview = [
     {label: 'Casual Makeup', img: 'images/casual-makeup.jpg', },
     {label: 'Owambe Makeup', img: 'images/owambe-makeup.jpg', },
     {label: 'Graduation Makeup', img: 'images/graduation-makeup.jpg', },
-    {label: 'Gele Tying', img: 'images/gele-tying.jpg', },
+    {label: 'Gele Tying', img: 'images/gele-tying.jpg'},
     {label: 'Bouquet and Bridal Accessories', img: 'images/bouquet.jpg', }
 
 ]
