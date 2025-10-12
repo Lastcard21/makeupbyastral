@@ -33,6 +33,11 @@ const Portfolio = () => {
               <span>View portfolio on Instagram</span>
             </button>
           </a>
+           <a href="https://www.facebook.com/share/191t6zDUCf/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
+            <button className="bg-darkred text-white px-6 py-2 rounded-lg shadow-md font-semibold hover:bg-red-900 transition duration-200">
+              <span>View portfolio on Facebook</span>
+            </button>
+          </a>
         </div>
       </div>
       <Footer />
