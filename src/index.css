@@ -55,3 +55,27 @@ h1 span {
   font-weight: 700;
   font-style: normal;
 }
+
+
+/* iPhone Safari input normalization */
+input[type="date"],
+input[type="time"],
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: rgba(128, 0, 0, 0.05); /* same as bg-darkred/5 */
+  border: 1px solid #8b0000; /* dark red */
+  border-radius: 0.5rem; /* same as rounded-lg */
+  padding: 0.75rem 1rem;
+  width: 100%;
+  color: #8b0000;
+  font-family: inherit;
+  outline: none;
+}
+
+input[type="date"]:focus,
+input[type="time"]:focus,
+select:focus {
+  box-shadow: 0 0 0 2px #8b0000;
+}

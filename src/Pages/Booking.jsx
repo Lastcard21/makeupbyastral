@@ -219,7 +219,7 @@ function Booking() {
                   placeholderText="Select your booking date"
                   name="date"
                   required
-                  className="w-[345px] px-4 py-3 rounded-lg border border-darkred focus:outline-none focus:ring-2 focus:ring-darkred bg-darkred/5 text-darkred"
+                  className="w-full px-4 py-3 rounded-lg border border-darkred focus:outline-none focus:ring-2 focus:ring-darkred bg-darkred/5 text-darkred appearance-none"
                 />
                 <p className="text-xs text-gray-500 mt-1">
                   Fully booked till 31st of this month
@@ -232,7 +232,7 @@ function Booking() {
                   type="time"
                   name="time"
                   required
-                  className="w-full px-4 py-3 rounded-lg border border-darkred focus:outline-none focus:ring-2 focus:ring-darkred bg-darkred/5 text-darkred"
+                  className="w-full px-4 py-3 rounded-lg border border-darkred focus:outline-none focus:ring-2 focus:ring-darkred bg-darkred/5 text-darkred appearance-none"
                 />
               </div>
             </div>
@@ -241,7 +241,7 @@ function Booking() {
             <select
               name="service"
               required
-              className="w-full px-4 py-3 rounded-lg border border-darkred focus:outline-none focus:ring-2 focus:ring-darkred bg-darkred/5 text-darkred"
+              className="w-full px-4 py-3 rounded-lg border border-darkred focus:outline-none focus:ring-2 focus:ring-darkred bg-darkred/5 text-darkred appearance-none"
             >
               <option value="">Select Service</option>
               <option value="Bridal Makeup">Bridal Makeup - $150</option>
@@ -258,7 +258,7 @@ function Booking() {
                 value={location}
                 onChange={(e) => setLocation(e.target.value)}
                 required
-                className="w-full px-4 py-3 rounded-lg border border-darkred focus:outline-none focus:ring-2 focus:ring-darkred bg-darkred/5 text-darkred"
+                className="w-full px-4 py-3 rounded-lg border border-darkred focus:outline-none focus:ring-2 focus:ring-darkred bg-darkred/5 text-darkred appearance-none"
               >
                 <option value="">Select Service Location</option>
                 <option value="Studio">Studio Service</option>
