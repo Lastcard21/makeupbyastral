@@ -150,7 +150,6 @@
 // export default Booking;
 
 
-
 import React, { useState } from "react";
 import Footer from "../components/Footer";
 import DatePicker from "react-datepicker";
@@ -160,7 +159,7 @@ function Booking() {
   const [location, setLocation] = useState("Select Service Location");
   const [selectedDate, setSelectedDate] = useState(null);
 
-  // Disable 19–31 of this month only
+  // Disable 19–31 of current month
   const isDateDisabled = (date) => {
     const today = new Date();
     const sameMonth = date.getMonth() === today.getMonth();
@@ -208,35 +207,37 @@ function Booking() {
               className="w-full px-4 py-3 rounded-lg border border-darkred focus:outline-none focus:ring-2 focus:ring-darkred bg-darkred/5 placeholder-darkred"
             />
 
-            {/* Date & Time side by side */}
+            {/* Date and Time */}
             <div className="flex flex-col sm:flex-row gap-4">
-              {/* DatePicker */}
-              <div className="w-full sm:w-1/2">
+              <div className="w-full sm:w-full">
+                <p className="text-sm text-darkred mb-1">Date</p>
                 <DatePicker
                   selected={selectedDate}
                   onChange={(date) => setSelectedDate(date)}
                   filterDate={(date) => !isDateDisabled(date)}
                   minDate={new Date()}
-                  placeholderText="Select Date"
+                  placeholderText="Select your booking date"
                   name="date"
                   required
-                  className="w-full px-4 py-3 rounded-lg border border-darkred focus:outline-none focus:ring-2 focus:ring-darkred bg-darkred/5 text-darkred placeholder-darkred"
+                  className="w-[345px] px-4 py-3 rounded-lg border border-darkred focus:outline-none focus:ring-2 focus:ring-darkred bg-darkred/5 text-darkred"
                 />
+                <p className="text-xs text-gray-500 mt-1">
+                  Fully booked till 31st of this month
+                </p>
               </div>
 
-              {/* Time */}
               <div className="w-full sm:w-1/2">
+                <p className="text-sm text-darkred mb-1">Time</p>
                 <input
                   type="time"
                   name="time"
-                  placeholder="Select Time"
                   required
-                  className="w-full px-4 py-3 rounded-lg border border-darkred focus:outline-none focus:ring-2 focus:ring-darkred bg-darkred/5 text-darkred placeholder-darkred"
+                  className="w-full px-4 py-3 rounded-lg border border-darkred focus:outline-none focus:ring-2 focus:ring-darkred bg-darkred/5 text-darkred"
                 />
               </div>
             </div>
 
-            {/* Service Selection */}
+            {/* Service */}
             <select
               name="service"
               required
@@ -250,7 +251,7 @@ function Booking() {
               <option value="Gele Tying">Gele Tying - $15</option>
             </select>
 
-            {/* Location Selection */}
+            {/* Location */}
             <div>
               <select
                 name="location"
@@ -270,7 +271,7 @@ function Booking() {
             {/* Notes */}
             <textarea
               name="notes"
-              placeholder="Extra Notes / Address"
+              placeholder="Extra Notes/Address"
               required={location === "Home"}
               className="w-full px-4 py-3 rounded-lg border border-darkred focus:outline-none focus:ring-2 focus:ring-darkred bg-darkred/5 placeholder-darkred min-h-[80px]"
             ></textarea>
@@ -297,7 +298,7 @@ function Booking() {
             </div>
           </div>
 
-          {/* Hidden Inputs */}
+          {/* Hidden Fields */}
           <input type="hidden" name="_subject" value="New Booking Received!" />
           <input type="hidden" name="_template" value="table" />
           <input type="hidden" name="_captcha" value="false" />
