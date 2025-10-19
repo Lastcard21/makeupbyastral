@@ -80,21 +80,26 @@ select:focus {
   box-shadow: 0 0 0 2px #8b0000;
 }
 
-input[type="date"]::-webkit-datetime-edit-fields-wrapper {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
 
-input[type="date"]:disabled {
-  opacity: 0.5; /* make it less visible */
-  cursor: not-allowed;
-}
 
-input[type="date"] {
+
+
+
+
+
+
+input[type="date"],
+input[type="time"],
+select {
   width: 100%;
-  text-align: center;
-  padding: 8px;
+  box-sizing: border-box;
+  height: 45px; /* match your other inputs' height */
+  border: 1px solid #a52a2a; /* same color as your theme */
   border-radius: 8px;
-  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 16px;
+  appearance: none; /* removes iOS default calendar icon sizing */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #fff;
 }
