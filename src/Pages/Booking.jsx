@@ -3,6 +3,8 @@ import Footer from "../components/Footer";
 
 function Booking() {
   const [location, setLocation] = useState("Select Service Location");
+  const [selectedDate, setSelectedDate] = useState("");
+
 
   return (
     <div>
@@ -50,23 +52,24 @@ function Booking() {
                   className="w-full px-4 py-3 rounded-lg border border-darkred focus:outline-none focus:ring-2 focus:ring-darkred bg-darkred/5 text-darkred"
                 /> */}
                 <input
-                  type="date"
-                  name="date"
-                  required
-                  className="w-full px-4 py-3 rounded-lg border border-darkred focus:outline-none focus:ring-2 focus:ring-darkred bg-darkred/5 text-darkred"
-                  onChange={(e) => {
-                    const selectedDate = new Date(e.target.value);
-                    const day = selectedDate.getDate();
+  type="date"
+  name="date"
+  required
+  value={selectedDate}
+  onChange={(e) => {
+    const selected = e.target.value;
+    const day = new Date(selected).getDate();
 
-                    // Prevent selecting dates from 19 to 31
-                    if (day >= 19 && day <= 31) {
-                      alert(
-                        "Bookings are not available from the 19th to the 31st of this month."
-                      );
-                      e.target.value = ""; // reset input
-                    }
-                  }}
-                />
+    if (day >= 19 && day <= 31) {
+      alert("Bookings are not available from the 19th to the 31st of this month.");
+      setSelectedDate(""); // reset date
+    } else {
+      setSelectedDate(selected);
+    }
+  }}
+  className="w-full px-4 py-3 rounded-lg border border-darkred focus:outline-none focus:ring-2 focus:ring-darkred bg-darkred/5 text-darkred"
+/>
+
               </div>
               <div className="w-full sm:w-1/2">
                 <p className="text-sm text-darkred mb-1">Time</p>
