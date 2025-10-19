@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import Footer from '../components/Footer';
+import React, { useState } from "react";
+import Footer from "../components/Footer";
 
 function Booking() {
-  const [location, setLocation] = useState('Select Service Location');
+  const [location, setLocation] = useState("Select Service Location");
 
   return (
     <div>
@@ -43,11 +43,29 @@ function Booking() {
             <div className="flex flex-col sm:flex-row gap-4">
               <div className="w-full sm:w-1/2">
                 <p className="text-sm text-darkred mb-1">Date</p>
+                {/* <input
+                  type="date"
+                  name="date"
+                  required
+                  className="w-full px-4 py-3 rounded-lg border border-darkred focus:outline-none focus:ring-2 focus:ring-darkred bg-darkred/5 text-darkred"
+                /> */}
                 <input
                   type="date"
                   name="date"
                   required
                   className="w-full px-4 py-3 rounded-lg border border-darkred focus:outline-none focus:ring-2 focus:ring-darkred bg-darkred/5 text-darkred"
+                  onChange={(e) => {
+                    const selectedDate = new Date(e.target.value);
+                    const day = selectedDate.getDate();
+
+                    // Prevent selecting dates from 19 to 31
+                    if (day >= 19 && day <= 31) {
+                      alert(
+                        "Bookings are not available from the 19th to the 31st of this month."
+                      );
+                      e.target.value = ""; // reset input
+                    }
+                  }}
                 />
               </div>
               <div className="w-full sm:w-1/2">
@@ -80,7 +98,7 @@ function Booking() {
               <select
                 name="location"
                 value={location}
-                onChange={e => setLocation(e.target.value)}
+                onChange={(e) => setLocation(e.target.value)}
                 required
                 className="w-full px-4 py-3 rounded-lg border border-darkred focus:outline-none focus:ring-2 focus:ring-darkred bg-darkred/5 text-darkred"
               >
@@ -90,30 +108,33 @@ function Booking() {
                   Home Service (Currently Unavailable)
                 </option>
               </select>
-              
             </div>
 
             <textarea
               name="notes"
               placeholder="Extra Notes/Address"
-              required={location === 'Home'}
+              required={location === "Home"}
               className="w-full px-4 py-3 rounded-lg border border-darkred focus:outline-none focus:ring-2 focus:ring-darkred bg-darkred/5 placeholder-darkred min-h-[80px]"
             ></textarea>
 
             {/* Payment Instructions */}
             <div className="bg-darkred/5 p-4 rounded-lg border border-darkred text-sm text-darkred mt-4">
               <p>
-                <strong>Important:</strong> To confirm your appointment, please make an initial payment of <span className="font-bold">$30</span>. 
-                The remaining balance will be paid on the day of your reserved session (Email PayID).
+                <strong>Important:</strong> To confirm your appointment, please
+                make an initial payment of{" "}
+                <span className="font-bold">$30</span>. The remaining balance
+                will be paid on the day of your reserved session (Email PayID).
               </p>
               <p className="mt-2">
-                Email PayID: <span className="font-bold">akandebashirat@gmail.com</span>
+                Email PayID:{" "}
+                <span className="font-bold">akandebashirat@gmail.com</span>
               </p>
               <p>
                 Name: <span className="font-bold">B Akande</span>
               </p>
               <p className="mt-2 italic">
-                Your booking will only be confirmed after the advance payment has been received.
+                Your booking will only be confirmed after the advance payment
+                has been received.
               </p>
             </div>
           </div>
