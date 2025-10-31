@@ -160,12 +160,12 @@ function Booking() {
   const [selectedDate, setSelectedDate] = useState(null);
 
   // Disable 19–31 of current month
-  const isDateDisabled = (date) => {
-    const today = new Date();
-    const sameMonth = date.getMonth() === today.getMonth();
-    const day = date.getDate();
-    return sameMonth && day >= 19 && day <= 31;
-  };
+  // const isDateDisabled = (date) => {
+  //   const today = new Date();
+  //   const sameMonth = date.getMonth() === today.getMonth();
+  //   const day = date.getDate();
+  //   return sameMonth && day >= 19 && day <= 31;
+  // };
 
   return (
     <div>
@@ -214,16 +214,14 @@ function Booking() {
                 <DatePicker
                   selected={selectedDate}
                   onChange={(date) => setSelectedDate(date)}
-                  filterDate={(date) => !isDateDisabled(date)}
-                  minDate={new Date()}
+                  // filterDate={(date) => !isDateDisabled(date)}
+                  // minDate={new Date()}
                   placeholderText="Select your booking date"
                   name="date"
                   required
                   className="w-full px-4 py-3 rounded-lg border border-darkred focus:outline-none focus:ring-2 focus:ring-darkred bg-darkred/5 text-darkred appearance-none"
                 />
-                <p className="text-xs text-gray-500 mt-1">
-                  Fully booked till 31st of this month
-                </p>
+               
               </div>
 
               <div className="w-full sm:w-1/2">
