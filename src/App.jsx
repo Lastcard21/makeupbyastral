@@ -143,7 +143,7 @@ const App = () => {
       <nav className="flex justify-between items-center px-8 py-5 bg-darkred text-white sticky top-0 z-20 shadow-md">
         {/* Logo / Brand */}
         <NavLink to="/" className="text-2xl font-bold tracking-wide flex">
-          makeupbystral
+          makeupbyastral
         </NavLink>
 
         {/* Hamburger Icon (like Auslife) */}
