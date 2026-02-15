@@ -150,6 +150,9 @@
 // export default Booking;
 
 
+  
+
+
 import React, { useState } from "react";
 import Footer from "../components/Footer";
 import DatePicker from "react-datepicker";
@@ -158,6 +161,7 @@ import "react-datepicker/dist/react-datepicker.css";
 function Booking() {
   const [location, setLocation] = useState("Select Service Location");
   const [selectedDate, setSelectedDate] = useState(null);
+  const [hasAllergy, setHasAllergy] = useState("");
 
   // Disable 19–31 of current month
   // const isDateDisabled = (date) => {
@@ -180,6 +184,7 @@ function Booking() {
           </h2>
 
           <div className="space-y-4">
+
             {/* Name */}
             <input
               type="text"
@@ -214,14 +219,11 @@ function Booking() {
                 <DatePicker
                   selected={selectedDate}
                   onChange={(date) => setSelectedDate(date)}
-                  // filterDate={(date) => !isDateDisabled(date)}
-                  // minDate={new Date()}
                   placeholderText="Select your booking date"
                   name="date"
                   required
                   className="w-full px-4 py-3 rounded-lg border border-darkred focus:outline-none focus:ring-2 focus:ring-darkred bg-darkred/5 text-darkred appearance-none"
                 />
-               
               </div>
 
               <div className="w-full sm:w-1/2">
@@ -246,7 +248,6 @@ function Booking() {
               <option value="Casual Makeup">Casual Makeup - $100</option>
               <option value="Owambe Makeup">Owambe Makeup - $100</option>
               <option value="Graduation Makeup">Graduation Makeup - $100</option>
-              
             </select>
 
             {/* Location */}
@@ -263,6 +264,49 @@ function Booking() {
                 <option value="Home" disabled>
                   Home Service (Currently Unavailable)
                 </option>
+              </select>
+            </div>
+
+            {/* Skin Allergy Question */}
+            <div>
+              <p className="text-sm text-darkred mb-1">Any skin allergy?</p>
+              <select
+                name="skin_allergy"
+                value={hasAllergy}
+                onChange={(e) => setHasAllergy(e.target.value)}
+                required
+                className="w-full px-4 py-3 rounded-lg border border-darkred focus:outline-none focus:ring-2 focus:ring-darkred bg-darkred/5 text-darkred"
+              >
+                <option value="">Select Option</option>
+                <option value="No">No</option>
+                <option value="Yes">Yes</option>
+              </select>
+            </div>
+
+            {/* Specify Allergy if Yes */}
+            {hasAllergy === "Yes" && (
+              <input
+                type="text"
+                name="allergy_specify"
+                placeholder="Please specify your allergy"
+                required
+                className="w-full px-4 py-3 rounded-lg border border-darkred focus:outline-none focus:ring-2 focus:ring-darkred bg-darkred/5 placeholder-darkred"
+              />
+            )}
+
+            {/* Social Media Permission */}
+            <div>
+              <p className="text-sm text-darkred mb-1">
+                Do you want the picture of your makeup session posted on our social media?
+              </p>
+              <select
+                name="social_media_permission"
+                required
+                className="w-full px-4 py-3 rounded-lg border border-darkred focus:outline-none focus:ring-2 focus:ring-darkred bg-darkred/5 text-darkred"
+              >
+                <option value="">Select Option</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
               </select>
             </div>
 
