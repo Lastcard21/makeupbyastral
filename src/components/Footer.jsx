@@ -34,7 +34,7 @@ const Footer = () => {
                 <h3 className="text-xl font-bold mb-2">Contact</h3>
                 <p className="text-sm">Phone: 0493353668</p>
                 <p className="text-sm">Email: makeupbyastral@gmail.com</p>
-                <p className="text-sm">Address: 40 Boudicca Dr, Forrestdale 6112</p>
+                <p className="text-sm">Address: Forrestdale 6112</p>
                 
                 <div className="flex gap-4 mt-4">
                     
